@@ -1,281 +1,125 @@
-<!doctype html>
-<html lang="en-us">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>About | Your Name</title>
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Bootstrap Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <style>
-
 body {
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 18px;
-  line-height: 34px;
-  color: #777777;
-  background-image: url("images/floor-tile.png");
+    margin:0px;
+    background-image: url("images/floor-tile.png");
+
 }
 
-* {
-  box-sizing: border-box;
-  
+.my-container {
+    border: 1px solid grey;
+    height: 350px;
+    margin: 80px 190px 190px 190px;
+    width: 70%;
+    background-color: white;
 }
 
-/* general */
-
-.container {
-  width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-  clear: both;
-}
-
-h1,
-h2,
-h3,
-p {
-  margin-bottom: 20px;
-}
-
-p:last-child {
-  margin-bottom: 0;
-}
-
-h1,
-h2,
-h3 {
-  font-family: Georgia, Times, "Times New Roman", serif;
+.my-row {
+    margin:20px 0 0 0;
+    font-size: 28px;
+    font-family: Georgia, Times, "Times New Roman", serif;
   font-weight: 700;
   color: #4aaaa5;
 }
 
-h1 {
-  padding-bottom: 20px;
-  font-size: 30px;
-  line-height: 49px;
-  border-bottom: 3px solid #dddddd;
+.my-col1 {
+margin: 10px;
+padding: 20px;
 }
 
-h2,
-h3 {
-  font-size: 22px;
+.my-col2 {
+    margin: 10px 20px 20px 20px;
+    padding: 20px;
+    right: 10px;
+}
+.my-col3 {
+    margin: 10px;
 }
 
-/* header */
-
-#masthead {
-  position: fixed;
-  z-index: 99;
-  width: 100%;
-  margin: 0 0 30px;
-  overflow: auto;
-  color: #ffffff;
-  background: #ffffff;
-  border-bottom: 2px solid #cccccc;
+html {
+    position: relative;
+    min-height: 100%;
 }
 
-#logo {
-  float: left;
-  width: 250px;
-  height: 90px;
-  font-family: Georgia, Times, "Times New Roman", serif;
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 90px;
-  color: #ffffff;
-  text-align: center;
-  text-decoration: none;
-  background: #4aaaa5;
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #4aaaa5;
+    left: 0;
 }
 
-nav {
-  float: right;
-  margin-top: 25px;
-}
-
-nav a {
-  display: inline-block;
-  padding-left: 15px;
-  margin-left: 15px;
-  line-height: 18px;
-  color: #999;
-  text-decoration: none;
-  border-left: 1px solid #efefef;
-}
-
-nav a:first-child {
-  border-left: 0 none;
-}
-
-/* footer */
-
-footer {
-  padding: 30px 0;
-  clear: both;
-  font-size: 12px;
-  color: #ffffff;
-  color: #cccccc;
-  text-align: center;
-  background: #666666;
-  border-top: 8px solid #4aaaa5;
-  height: 50px;
-}
-
-h3, h2 {
-  padding-bottom: 20px;
-  margin-bottom: 15px;
-  line-height: 22px;
-  border-bottom: 2px solid #eeeeee;
-}
-
-/* main */
-
-#main-container {
-  padding-top: 130px;
-  min-height: calc(100vh - 70px);
-}
-
-.main-section {
-  float: left;
-  width: 100%;
-  max-width: 960px;
-  padding: 30px;
-  margin: 0 0 40px;
-  background: #ffffff;
-  border: 1px solid #dddddd;
-}
-
-/* portfolio page */
-
-.work {
-  position: relative;
-  float: left;
-  width: 274px;
-  margin: 20px 0 25px;
-  overflow: auto;
-}
-
-.work:nth-child(even) {
-  margin-right: 40px;
-}
-
-.work img {
-  width: 100%;
-  border: 0 none;
-  opacity: 0.8;
-}
-
-.work h3 {
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  padding: 15px;
-  margin-bottom: 0;
-  font-weight: 300;
-  line-height: 30px;
-  color: #ffffff;
-  text-align: center;
-  background: #4aaaa5;
-  border-bottom: 0;
-}
-
-.auth-image {
-  float: left;
-  width: 200px;
-  height: auto;
-  margin-top: 10px;
-  margin-right: 25px;
-}
-
-/* contact page */
-
-#contact-form ul {
-  margin-bottom: 20px;
-}
-
-#contact-form li {
-  margin-bottom: 10px;
-}
-
-label,
-input[type=text],
-input[type=email],
-textarea {
-  display: block;
-  width: 100%;
-}
-
-input[type=text],
-input[type=email],
-textarea {
-  height: 35px;
-  padding: 0 10px;
-  font-size: 14px;
-  border: 1px solid #dddddd;
-}
-
-textarea {
-  height: 200px;
-}
-
-input[type=submit] {
-  padding: 10px 30px;
-  font-size: 18px;
-  color: #ffffff;
-  cursor: pointer;
-  background: #4aaaa5;
-  border: 0 none;
-}
 
 </style>
-
-<header id="masthead">
-    <div class="container">
-      <a href="index.html" id="logo">Marie</a>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link" href="index.html">About <span class="sr-only"></span></a>
-            <a class="nav-item nav-link" href="portfolio.html">Portfolio</a>
-            <a class="nav-item nav-link" href="contact.html">About</a>
-            
-          </div>
-        </div>
-      </nav>
-    </div>
-  </header>
+</head>
+<header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Marie</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                  <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="#">About <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="#">Portfolio</a>
+                    <a class="nav-item nav-link" href="#">Contact</a>
+                    
+                  </div>
+                </div>
+              </nav>
+</header>
 
 <body>
 
-  
+        <div class="container my-container">
+                <div class="row my-row">
+                    <div class="col-md-4 col-sm-6 my-col">
+                            About Me
+                    </div>               
+                </div>
+                
+                <div class="row my-row2">
+                        <div class="col-md-3 col-sm-6 my-col1">
+                                <div class="media">
+                                        <img src="images/dog.jpg" class="align-self-center mr-3" alt="..." width="220px" height="150px;">
+                                        
+                                      </div>
+                        </div>   
+                        <div class="col-md-8 col-sm-6 my-col2">
+                                <div class="media-body">
+                                        
+                                        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                                        <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                                      </div>
+                        </div> 
+                
+        
+                    </div>
+                    <div class="row my-row3">
+                            <div class="col-md-12 col-sm-6 my-col3">
+                                    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                            </div>               
+                        </div>
 
-  <div id="main-container" class="container">
-    <section class="main-section">
-      <h1>About Me</h1>
 
-      <img src="images/dog.jpg" class="auth-image" alt="Your Name">
 
-      <p>Hi ! I'm here to tell you a little bit about myself. I turned 21 this month, a day before our first lesson at bootcamp. I recently bought a house and I'm looking to get a dog soon. My favourite TV series is, Avatar the Last Airbender, I love gaming and I just started streaming on Twitch. My favourite games are COD, Need for Speed, Apex Legends, Overwatch, God of War and Sims 4.</p>
-
-      <p>I currently work as an admin for a packaging/printing company, i'm in charge of the accounts and distribution of goods. My background is half Thai and half Italian and I was born in Perth, WA. I really enjoy coding, although it is quite tricky and frustrating at times.</p>
-
-      <p>Some good Netflix series are, Suits and David Attenborough (the deep sea episode to be exact).One of my favourite hobbies is painting or drawing. Since I recently bought a house, I really love gardening and I never thought I would, I feel old ...</p>
-
-    </section>
-
-  </div>
-
-  <footer>
-    <div class="container">
-      Copyright &copy; 
-    </div>
-  </footer>
 </body>
+
+<footer class="footer mt-auto py-3">
+        <div class="container">
+          <span class="text-muted">Place sticky footer content here.</span>
+        </div>
+      </footer>
+
+
 
 </html>
