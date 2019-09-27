@@ -15,17 +15,28 @@ body {
 
 }
 
+* {
+    box-sizing: border-box;
+}
+
 .my-container {
     border: 1px solid grey;
     height: 390px;
     margin-top:60px;
+    font-size:1.2vw;
     background-color: white;
     padding: 20px;
     max-width: 960px;
     clear: both;
 }
 
-.row {
+
+
+.my-col {
+    
+    max-width: 100%;
+    height: auto;
+    display: block;
     margin: 20px;
 }
 
@@ -38,6 +49,19 @@ body {
   font-size: 30px;
   line-height: 49px;
   border-bottom: 3px solid #dddddd;
+}
+
+.my-col-1 {
+    
+    top: 30px;
+    margin: -10px 20px 20px 20px;
+    left: -30px;
+
+}
+
+.my-col-2 {
+    margin: 20px 20px 20px 20px;
+    left: -30px;
 }
 
 .row3 {
@@ -92,19 +116,21 @@ html {
                   
                 </div>
 
-                <div class="row">
-                        <div class="col-3">
-                            <img src="images/dog.jpg" width="200" height="130" alt="image1">
+                <section>
 
+                        <div class="row">
+                                <div class="col-sm-1 my-col"><img src="images/dog.jpg"  width="200" height="130" alt="image1">
+                                </div>
+                                <div class="col-sm my-col-1">
+                                    <p>Hi ! I'm here to tell you a little bit about myself. I turned 21 this month, a day before our first lesson at bootcamp. I recently bought a house and I'm looking to get a dog soon.<br><br> My favourite TV series is, Avatar the Last Airbender, I love gaming and I just started streaming on Twitch. My favourite games are COD, Need for Speed, Apex Legends, Overwatch, God of War and Sims 4.</p>
+                                </div>
                         </div>
 
-                        <div class="col-9">
-                                <p>Hi ! I'm here to tell you a little bit about myself. I turned 21 this month, a day before our first lesson at bootcamp. I recently bought a house and I'm looking to get a dog soon.<br><br> My favourite TV series is, Avatar the Last Airbender, I love gaming and I just started streaming on Twitch. My favourite games are COD, Need for Speed, Apex Legends, Overwatch, God of War and Sims 4.</p>
-                        </div>
-                      </div>
+               
+                </section>
 
                 <div class="row3">
-                        <div class="col">
+                        <div class="col-sm my-col-2">
                                 <p>I currently work as an admin for a packaging/printing company, i'm in charge of the accounts and distribution of goods. My background is half Thai and half Italian and I was born in Perth, WA. I really enjoy coding, although it is quite tricky and frustrating at times.</p>
                         </div>
                         
